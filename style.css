@@ -1,0 +1,183 @@
+html{
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(#7f7fd5, #86a8e7,#91eae4);
+    overflow: hidden;
+}
+
+@keyframes btn{
+    from {margin-top: 0vh;}
+    to {margin-top: 100vh;}
+}
+
+
+kbd{
+    font-size: 35px;
+}
+
+#container{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+}
+
+#r-1{
+    display: flex;
+    width: 20vw;
+    height: 100vh;
+}
+
+#r-2{
+    display: flex;
+    width: 20vw;
+    height: 100vh;
+}
+
+#r-3{
+    display: flex;
+    width: 20vw;
+    height: 100vh;
+}
+
+#r-4{
+    display: flex;
+    width: 20vw;
+    height: 100vh;
+}
+
+#r-5{
+    display: flex;
+    width: 20vw;
+    height: 100vh;
+}
+
+#textView{
+    background-color: #86a8e7;
+    position: absolute;
+    top: 2vh;
+    left: 41vw; 
+    height: 45px;
+    width: 180px;
+    text-align: center;
+    font-size: 30px;
+    color: seashell;
+}
+
+.key{
+    background-color: blanchedalmond;
+    justify-content: center;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    display: flex;
+    margin: 3%;
+    color: black;
+    padding: 2em;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 300px;
+    animation-name: btn;
+    animation-duration: 2s;
+    animation-direction: reverse;
+}
+
+.sound{
+    position: relative;
+    display: flex;
+    font-size: medium;
+    top: 20px;
+    right: 28px;
+}
+
+#refresh{
+    width: 68px;
+    height: 68px;
+  z-index: 100px;
+  border: solid;
+  border-color: aqua;
+  border-width: 3px;
+  border-radius: 110px;
+}
+
+#play{
+  width: 64px;
+  height: 64px;
+  z-index: 100px;
+  border: solid;
+  border-color: aqua;
+  border-width: 3px;
+  border-radius: 100px;
+  position: relative;
+}
+
+#play:hover{
+  transform: rotate(360deg); 
+  z-index: -100px;
+  transition-duration: 0.5s;
+}
+
+#play:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(6px);
+}
+
+
+#refresh:hover{
+  transform: rotate(360deg); 
+  z-index: -100px;
+  transition-duration: 0.5s;
+}
+
+#refresh:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(6px);
+}
+
+/* Wave Animation Taken from the link https://codepen.io/tedmcdo/pen/PqxKXg*/
+
+.ocean { 
+    height: 0%;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    background: #015871;
+  }
+  
+  .wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+    position: absolute;
+    top: -50px;
+    width: 9400px;
+    height: 100px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .wave:nth-of-type(2) {
+    top: -50px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+    opacity: 1;
+  }
+  
+  @keyframes wave {
+    0% {
+      margin-left: 0;
+    }
+    100% {
+      margin-left: -1600px;
+    }
+  }
+  
+  @keyframes swell {
+    0%, 100% {
+      transform: translate3d(0,-25px,0);
+    }
+    50% {
+      transform: translate3d(0,5px,0);
+    }
+  }
